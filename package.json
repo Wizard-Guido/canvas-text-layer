@@ -1,0 +1,66 @@
+{
+  "name": "canvas-text-layer",
+  "version": "1.0.0",
+  "description": "The DOM text-mirror technique from Mozilla PDF.js, extracted as a 13 KB framework-agnostic library. Makes canvas-rendered text searchable (Ctrl+F), selectable, copyable, and fully readable by screen readers. Works with any canvas — Konva, Fabric.js, tldraw, custom renderers.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Wen <https://github.com/Wizard-Guido>",
+  "homepage": "https://github.com/Wizard-Guido/canvas-text-layer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wizard-Guido/canvas-text-layer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Wizard-Guido/canvas-text-layer/issues"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "canvas",
+    "accessibility",
+    "a11y",
+    "screen-reader",
+    "text-layer",
+    "dom-mirror",
+    "find-in-page",
+    "ctrl-f",
+    "text-selection",
+    "aria",
+    "wcag",
+    "pdfjs",
+    "konva",
+    "fabric",
+    "tldraw"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run build:esm && bun run build:cjs && bun run build:dts",
+    "build:esm": "bun build src/index.ts --outfile dist/index.js --format esm --target browser",
+    "build:cjs": "bun build src/index.ts --outfile dist/index.cjs --format cjs --target browser",
+    "build:dts": "tsc --emitDeclarationOnly --outDir dist",
+    "test": "bun --bun vitest run",
+    "test:watch": "bun --bun vitest",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.4",
+    "axe-core": "^4.11.2",
+    "jsdom": "^29.0.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  }
+}

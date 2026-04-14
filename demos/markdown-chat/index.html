@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas-text-layer — Markdown Chat Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    :root {
+      color-scheme: dark;
+      --page: #333740;
+      --ink: #d5d9e1;
+      --muted: #9ea6b2;
+      --accent: #b7c0cf;
+      --user-bubble: #394048;
+      --code-bg: #313840;
+    }
+    html, body {
+      min-height: 100%;
+      background: var(--page);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .instructions {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .instructions kbd {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: "SF Mono", ui-monospace, Menlo, monospace;
+      font-size: 11px;
+    }
+    .chat-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--page);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .status {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .status span {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <h1>canvas-text-layer — Markdown Chat Demo</h1>
+  <p class="subtitle">Canvas-rendered chat with full accessibility via DOM mirroring</p>
+  <div class="instructions">
+    Try: <kbd>Ctrl+F</kbd> / <kbd>Cmd+F</kbd> to search &middot;
+    Select text with mouse &middot;
+    <kbd>Ctrl+C</kbd> / <kbd>Cmd+C</kbd> to copy &middot;
+    Turn on a screen reader to hear content
+  </div>
+  <div class="chat-container" id="chat-container">
+    <canvas id="chat-canvas"></canvas>
+  </div>
+  <p class="status" id="status"></p>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
