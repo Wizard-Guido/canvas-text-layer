@@ -2,11 +2,12 @@
 
 > The DOM text-mirror technique from Mozilla PDF.js — extracted as a 13 KB, framework-agnostic library for any canvas.
 
-[![npm](https://img.shields.io/npm/v/canvas-text-layer.svg)](https://www.npmjs.com/package/canvas-text-layer)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/canvas-text-layer)](https://bundlephobia.com/package/canvas-text-layer)
-[![license](https://img.shields.io/npm/l/canvas-text-layer.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/canvas-text-layer.svg?label=npm&color=cb3837)](https://www.npmjs.com/package/canvas-text-layer)
+[![size](https://img.shields.io/badge/size-13%20KB-blue.svg)](./dist)
+[![zero deps](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](./package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6.svg)](./src/types.ts)
 [![tests](https://img.shields.io/badge/tests-32%20passing-brightgreen.svg)](./tests)
-[![types](https://img.shields.io/npm/types/canvas-text-layer.svg)](./src/types.ts)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 `<canvas>` text is pixels. Screen readers can't read it. Browsers can't search it. Users can't select it. Most canvas apps just ship a broken accessibility story and hope nobody notices.
 
