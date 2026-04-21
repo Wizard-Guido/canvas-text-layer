@@ -425,7 +425,7 @@ cd canvas-text-layer
 bun install
 bun run test        # 32 tests, jsdom + axe-core
 bun run build       # ESM + CJS + .d.ts
-bunx --bun vite demos/markdown-chat   # interactive demo
+bun run demos:dev   # interactive demo on http://localhost:5173/canvas-text-layer/
 ```
 
 Bug reports with a reproducible case get triaged first. See [`HANDOFF.md`](./HANDOFF.md) (if present) for architecture history.

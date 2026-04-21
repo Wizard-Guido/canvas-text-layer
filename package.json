@@ -53,6 +53,9 @@
     "build:dts": "tsc --emitDeclarationOnly --outDir dist",
     "test": "bun --bun vitest run",
     "test:watch": "bun --bun vitest",
+    "demos:dev": "bunx --bun vite",
+    "demos:build": "bunx --bun vite build",
+    "demos:preview": "bunx --bun vite preview",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
@@ -61,6 +64,7 @@
     "axe-core": "^4.11.2",
     "jsdom": "^29.0.2",
     "typescript": "^6.0.2",
+    "vite": "^8.0.0",
     "vitest": "^4.1.4"
   }
 }
